@@ -1,9 +1,22 @@
 @import url('normalize.css');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-
+//Variable
 $fontsizenormal: 14px;
-$primary--color: red;
+
+$font-thin: 100;
+$font-light: 300;
+$font-regular: 500;
+$font-bold: 700;
+$font-black: 900;
+//Extends
+
 :root {
+    //Color
+    --black: rgba(22, 24, 35, 1);
+    --pink: rgba(254, 44, 85, 1);
+    --search__button--color: rgba(22, 24, 35, 0.34);
+    --search--spliter: rgba(22, 24, 35, 0.12);
+    --search--border: rgba(22, 24, 35, 0.2);
 }
 
 html {
@@ -16,10 +29,15 @@ html {
 body {
     font-family: 'Lato', sans-serif;
     font-size: $fontsizenormal;
-    color: rgba(22, 24, 35, 1);
     background-color: rgba(255, 255, 255, 1);
     overscroll-behavior: contain;
     direction: ltr;
     -webkit-font-smoothing: antialiased;
-    color: $primary--color;
+    color: var(--black);
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 1150px;
+    margin: 0 auto;
 }

@@ -1,15 +1,13 @@
-import Header from '../components/Header/index';
-import Sidebar from './Sidebar';
-function DefaultLayout({ children }) {
+import Header from '~/components/layout/components/Header';
+function Layout1Column({ children }) {
     return (
         <>
             <Header />
             <div className="container">
-                <Sidebar />
                 <div className="content">{children}</div>
             </div>
         </>
     );
 }
 
-export default DefaultLayout;
+export default Layout1Column;
