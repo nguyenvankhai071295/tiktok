@@ -7,6 +7,7 @@ import Search from '~/pages/SearchPage';
 import Profile from '~/pages/ProfilePage';
 import Message from '~/pages/Message';
 import Inbox from '~/pages/InboxPage';
+import Feedback from '~/pages/Feedback/Feedback';
 //Public routes
 const publicRoutes = [
     { path: '/', element: Home },
@@ -17,6 +18,7 @@ const publicRoutes = [
     { path: '/profile', element: Profile, layout: Layout1Column },
     { path: '/message', element: Message },
     { path: '/inbox', element: Inbox },
+    { path: '/feedback', element: Feedback },
 ];
 
 //Private routes

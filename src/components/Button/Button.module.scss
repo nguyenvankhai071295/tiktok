@@ -1,0 +1,68 @@
+.wrapper {
+    width: 100px;
+    height: 100%;
+    padding: 6px 8px;
+    border-radius: 4px;
+    font-weight: var(--fontbold);
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+.large,
+.small {
+    background-color: #ffffff;
+    color: #fe2c55;
+    border: 1px solid #fe2c55;
+    &:hover {
+        background-color: rgba(254, 44, 85, 0.06);
+    }
+}
+.medium {
+    background-color: var(--pink);
+    color: var(--white);
+    margin-left: 16px;
+    font-size: 16px;
+    min-height: 36px;
+    line-height: 20px;
+    border: none;
+    &:hover {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), #fe2c55;
+    }
+}
+.large {
+    display: block;
+    font-size: 18px;
+    min-height: 48px;
+    line-height: 25px;
+}
+.small {
+    display: inline-block;
+    font-size: 16px;
+    min-height: 28px;
+    line-height: 22px;
+}
+.rounded {
+    font-size: 14px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 6%);
+    border-radius: 52px;
+    min-height: 32px;
+    line-height: 30px;
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(22, 24, 35, 0.12);
+    color: rgba(22, 24, 35, 0.75);
+    padding: 0 8px;
+}
+.wrapper.line {
+    background-color: transparent;
+    border: none;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+    width: 100%;
+    margin: 0;
+    line-height: 22px;
+}

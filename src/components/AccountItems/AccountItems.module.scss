@@ -1,0 +1,45 @@
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.account-item {
+    padding: 9px 16px;
+    cursor: pointer;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+}
+.item-content {
+    margin-left: 12px;
+}
+.item-title {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 0;
+    svg {
+        width: 14px;
+        height: 14px;
+        margin-left: 4px;
+    }
+}
+.item-desc {
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(22, 24, 35, 0.5);
+    font-weight: 400;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+svg {
+    margin-left: 4px;
+    color: #20d5ec;
+}

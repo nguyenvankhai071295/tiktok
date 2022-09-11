@@ -1,25 +1,24 @@
 @import url('normalize.css');
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 //Variable
 $fontsizenormal: 14px;
 
-$font-thin: 100;
-$font-light: 300;
-$font-regular: 500;
-$font-bold: 700;
-$font-black: 900;
 //Extends
 
 :root {
     //Color
     --black: rgba(22, 24, 35, 1);
     --pink: rgba(254, 44, 85, 1);
+    --white: rgba(255, 255, 255, 1);
     --search__button--color: rgba(22, 24, 35, 0.34);
     --search--spliter: rgba(22, 24, 35, 0.12);
     --search--border: rgba(22, 24, 35, 0.2);
-}
 
-html {
+    //FontWeight
+    --fontthin: 100;
+    --fontlight: 300;
+    --fontregular: 500;
+    --fontbold: 700;
+    --fontblack: 900;
 }
 
 * {
@@ -27,7 +26,7 @@ html {
 }
 
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: ProximaNova, Arial, Tahoma, PingFangSC, sans-serif;
     font-size: $fontsizenormal;
     background-color: rgba(255, 255, 255, 1);
     overscroll-behavior: contain;
@@ -40,4 +39,92 @@ body {
 .container {
     max-width: 1150px;
     margin: 0 auto;
+}
+
+@keyframes anvil {
+    0% {
+        transform: scale(0.5) translateY(0px);
+        opacity: 0;
+        box-shadow: 0 0 0 rgba(241, 241, 241, 0);
+    }
+    50% {
+        transform: scale(0.75) translateY(10px);
+        opacity: 0;
+        box-shadow: 0 0 0 rgba(241, 241, 241, 0);
+    }
+    100% {
+        transform: scale(1) translateY(0px);
+        opacity: 1;
+        box-shadow: 0 0 500px rgba(241, 241, 241, 0);
+    }
+}
+//Fonts
+@font-face {
+    font-family: ProximaNova;
+    src: url('/assets/fonts/Proxima-Nova-Bold.woff');
+    font-weight: 700;
+}
+@font-face {
+    font-family: ProximaNova;
+    src: url('/assets/fonts/Proxima-Nova-Regular.woff2');
+    font-weight: 500;
+}
+@font-face {
+    font-family: ProximaNova;
+    src: url('/assets/fonts/Proxima-Nova-Semibold.woff2');
+    font-weight: 600;
+}
+@font-face {
+    font-family: sofiapro;
+    src: url('/assets/fonts/sofiapro-bold.woff2');
+    font-weight: 600;
+}
+@font-face {
+    font-family: sofiapro;
+    src: url('/assets/fonts/sofiapro-medium.woff');
+    font-weight: 500;
+}
+@font-face {
+    font-family: CircularXXWeb;
+    src: url('/assets/fonts/CircularXXWeb-Book-cd7d2bcec649b1243839a15d5eb8f0a3.woff2');
+    font-weight: 500;
+}
+
+//Custom popup
+#popup-root {
+    z-index: 10000;
+    position: relative;
+    .popup-arrow {
+        display: none;
+    }
+    .popup-overlay {
+        background: rgba(0, 0, 0, 0.5);
+    }
+}
+.popup-content {
+    -webkit-animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
+}
+
+//Custom tippy tooltip
+.tippy-box {
+    text-align: left;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    background-color: rgba(84, 84, 84, 0.92);
+    color: rgb(255, 255, 255);
+    padding: 8px;
+    .tippy-arrow {
+        color: rgba(84, 84, 84, 0.92);
+    }
+    .tippy-content {
+        padding: 0;
+    }
+}
+.tippy-box[data-placement^='bottom'] {
+    > .tippy-arrow:before {
+        top: -8px;
+    }
 }
