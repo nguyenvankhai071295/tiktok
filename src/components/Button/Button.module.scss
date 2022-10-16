@@ -8,6 +8,7 @@
     cursor: pointer;
     text-align: center;
     text-decoration: none;
+    font-family: ProximaNova, Arial, Tahoma, PingFangSC, sans-serif;
 }
 .large,
 .small {
@@ -65,4 +66,6 @@
     width: 100%;
     margin: 0;
     line-height: 22px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }

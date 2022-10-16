@@ -5,6 +5,7 @@ import images from '~/assets/images';
 import Item from './Item';
 import { useState } from 'react';
 import Header from './Header';
+import PropTypes from 'prop-types';
 const cx = classNames.bind(styles);
 
 function Menu({ children, items = [] }) {
@@ -32,6 +33,8 @@ function Menu({ children, items = [] }) {
         <Tippy
             interactive={true}
             placement={'bottom-end'}
+            hideOnClick={'false'}
+            delay={[0, 750]}
             onHide={() => {
                 setAddClass('');
                 setHistory((prev) => {
@@ -59,5 +62,8 @@ function Menu({ children, items = [] }) {
         </Tippy>
     );
 }
-
+Menu.propTypes = {
+    children: PropTypes.node.isRequired,
+    items: PropTypes.array,
+};
 export default Menu;

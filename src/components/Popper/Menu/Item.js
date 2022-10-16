@@ -4,10 +4,12 @@ import Button from '~/components/Button';
 import React from 'react';
 import Popup from 'reactjs-popup';
 import { VscClose } from 'react-icons/vsc';
+import PropTypes from 'prop-types';
 const cx = classNames.bind(styles);
 function Item({ data, onClick }) {
+    let classItem = data.classNames;
     return (
-        <li>
+        <li className={cx(classItem)}>
             {data.type ? (
                 <Popup
                     modal
@@ -38,5 +40,8 @@ function Item({ data, onClick }) {
         </li>
     );
 }
-
+Item.propTypes = {
+    data: PropTypes.object,
+    onClick: PropTypes.func,
+};
 export default Item;

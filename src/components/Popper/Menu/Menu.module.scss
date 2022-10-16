@@ -1,3 +1,6 @@
+div:has(> .show-more) {
+    right: -14px !important;
+}
 .show-more {
     z-index: 1;
     background: rgb(255, 255, 255);
@@ -5,6 +8,7 @@
     box-shadow: rgba(0, 0, 0, 0.12) 0px 4px 16px;
     transition: opacity 300ms ease 0s;
     opacity: 1;
+    position: relative;
     .see-more-poppup {
         font-weight: 600;
         font-size: 16px;
@@ -13,6 +17,8 @@
         margin: 0px;
         min-width: 223px;
         list-style: none;
+        max-height: 590px;
+        overflow-y: auto;
         & > li {
             &:hover {
                 background: rgba(22, 24, 35, 0.03);
@@ -22,6 +28,9 @@
                 color: var(--black);
                 text-decoration: none;
             }
+        }
+        .login {
+            border-top: 1px solid rgba(22, 24, 35, 0.12);
         }
         .item {
             display: -webkit-box;
@@ -47,6 +56,8 @@
             font-weight: 600;
             font-size: 15px;
             cursor: pointer;
+            font-family: ProximaNova, Arial, Tahoma, PingFangSC, sans-serif;
+            letter-spacing: 0.5px;
         }
     }
     .arrow-up {
@@ -79,7 +90,7 @@
         svg {
             width: 20px;
             height: 20px;
-            margin-left: 28px;
+            margin-left: 21px;
             cursor: pointer;
             color: rgba(22, 24, 35, 1);
         }
@@ -93,6 +104,8 @@
             line-height: 20px;
             font-size: 14px;
             font-weight: 500;
+            font-family: SofiaPro, Arial, Tahoma, PingFangSC, sans-serif;
+            text-align: left;
             .icon {
                 display: none;
             }

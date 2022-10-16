@@ -1,8 +1,6 @@
 const images = {
     logo: require('~/assets/images/logo.svg').default,
     increase: require('~/assets/images/increase.svg').default,
-    message: require('~/assets/images/message.svg').default,
-    inbox: require('~/assets/images/inbox.svg').default,
     seemore: require('~/assets/images/seemore.svg').default,
     search: require('~/assets/images/search.svg').default,
     language: require('~/assets/images/language.svg').default,
@@ -13,6 +11,12 @@ const images = {
     next: require('~/assets/images/next.svg').default,
     like: require('~/assets/images/like.svg').default,
     mute: require('~/assets/images/mute.svg').default,
+    profile: require('~/assets/images/profile.svg').default,
+    coins: require('~/assets/images/coins.svg').default,
+    setting: require('~/assets/images/setting.svg').default,
+    logout: require('~/assets/images/logout.svg').default,
+    noimage: require('~/assets/images/no-image.png'),
+    login: require('~/assets/images/login.png'),
 };
 
 export default images;

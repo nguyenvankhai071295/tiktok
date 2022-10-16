@@ -9,6 +9,7 @@
     display: flex;
     -webkit-box-align: center;
     align-items: center;
+    text-decoration: none;
     &:hover {
         background-color: rgba(22, 24, 35, 0.03);
     }
@@ -24,10 +25,12 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     margin: 0;
+    color: rgba(22, 24, 35, 1);
     svg {
         width: 14px;
         height: 14px;
         margin-left: 4px;
+        color: #20d5ec;
     }
 }
 .item-desc {
@@ -38,8 +41,4 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-}
-svg {
-    margin-left: 4px;
-    color: #20d5ec;
 }
