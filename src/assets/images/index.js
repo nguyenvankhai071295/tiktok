@@ -17,6 +17,12 @@ const images = {
     logout: require('~/assets/images/logout.svg').default,
     noimage: require('~/assets/images/no-image.png'),
     login: require('~/assets/images/login.png'),
+    account: {
+        datvilla94: require('~/assets/images/SuggestedAccounts/datvilla94.jpeg'),
+        luongthingocha: require('~/assets/images/SuggestedAccounts/luongthingocha.jpeg'),
+        theanh28entertainment: require('~/assets/images/SuggestedAccounts/theanh28entertainment.jpeg'),
+        manhtienkhoi: require('~/assets/images/SuggestedAccounts/manhtienkhoi.jpeg'),
+    },
 };
 
 export default images;

@@ -145,8 +145,8 @@ const LOGOUT = {
     classNames: 'login',
 };
 function Header() {
-    const [colorMessage, setColorMessage] = useState(false);
-    const [colorInbox, setColorInbox] = useState(false);
+    const [activeMessage, setColorMessage] = useState(false);
+    const [activeInbox, setColorInbox] = useState(false);
     return (
         <div className={cx('header')}>
             <div className={cx('container')}>
@@ -174,10 +174,10 @@ function Header() {
                                             to={routesConfig.message}
                                             className={cx('message-action')}
                                             onClick={() => {
-                                                return setColorMessage(!colorMessage);
+                                                return setColorMessage(!activeMessage);
                                             }}
                                         >
-                                            {colorMessage ? <MessageAction /> : <Message />}
+                                            {activeMessage ? <MessageAction /> : <Message />}
                                         </Link>
                                     </Tippy>
                                 </div>
@@ -186,10 +186,10 @@ function Header() {
                                         <div
                                             className={cx('inbox-action')}
                                             onClick={() => {
-                                                return setColorInbox(!colorInbox);
+                                                return setColorInbox(!activeInbox);
                                             }}
                                         >
-                                            {colorInbox ? <InboxAction /> : <Inbox />}
+                                            {activeInbox ? <InboxAction /> : <Inbox />}
                                         </div>
                                     </Tippy>
                                 </div>

@@ -5,3 +5,21 @@
     display: flex;
     margin-top: 60px;
 }
+.sidebar {
+    flex: 1;
+}
+.wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+}
+.content {
+    margin-right: 16px;
+    margin-left: 16px;
+    width: 692px;
+    max-width: 692px;
+    padding: 24px 0;
+    position: relative;
+}

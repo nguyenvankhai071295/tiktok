@@ -37,8 +37,14 @@ body {
     margin: 0;
     padding: 0;
     overflow-y: overlay;
+    a {
+        text-decoration: none;
+    }
 }
-
+h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
 //Scrollbar
 html,
 * {
@@ -70,8 +76,20 @@ html,
 .container {
     max-width: 1150px;
     margin: 0 auto;
+    width: 100%;
 }
-
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
 @keyframes anvil {
     0% {
         transform: scale(0.5) translateY(0px);

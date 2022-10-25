@@ -32,6 +32,7 @@
     width: 100%;
     top: 0;
     background-color: #fff;
+    z-index: 1000;
     .content {
         @include dflex;
         @include flex-direction(row);
@@ -41,6 +42,7 @@
         height: 60px;
         padding-right: 24px;
         padding-left: 20px;
+        width: 100%;
     }
 }
 
