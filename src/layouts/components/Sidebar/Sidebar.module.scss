@@ -1,6 +1,6 @@
 .sidenav-container {
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: overlay;
     overscroll-behavior-y: contain;
     perspective: 1px;
     transform-style: preserve-3d;
@@ -13,7 +13,14 @@
     position: fixed;
     z-index: 99;
     padding-right: 8px;
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+    &:not(:hover)::-webkit-scrollbar-thumb {
+        background-color: transparent;
+    }
 }
+
 .sidenav-wrapper {
     -webkit-flex-shrink: 0;
     -ms-flex-negative: 0;
@@ -33,4 +40,29 @@
     align-items: stretch;
     min-height: 100%;
     padding-left: 8px;
+    .wrapper-login {
+        position: relative;
+        padding: 20px 8px 24px 8px;
+        margin: 0;
+        .log-hint {
+            color: rgba(22, 24, 35, 0.5);
+            font-size: 16px;
+            line-height: 22px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            height: 1px;
+            left: 8px;
+            right: 8px;
+            background: rgba(22, 24, 35, 0.12);
+            -webkit-transform: scaleY(0.5);
+            -moz-transform: scaleY(0.5);
+            -ms-transform: scaleY(0.5);
+            transform: scaleY(0.5);
+            top: 0;
+        }
+    }
 }

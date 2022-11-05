@@ -7,6 +7,7 @@ import Tippy from '@tippyjs/react/headless';
 import AccountItems from '~/components/AccountItems';
 import { useState, useEffect } from 'react';
 import { useDebounce } from '~/hooks';
+import * as searchService from '~/apiServices/searchService';
 const cx = classNames.bind(styles);
 
 function FormSearch() {
@@ -39,16 +40,18 @@ function FormSearch() {
             return setSearchResult([]);
         }
         setLoading(true);
-        fetch(`https://tiktok.fullstack.edu.vn/api/users/search?q=${encodeURIComponent(handleDelay)}&type=less`)
-            .then((response) => response.json())
-            .then((post) => {
-                setSearchResult(post.data);
-                setLoading(false);
-            })
-            .catch(() => {
-                setLoading(false);
-            });
+
+        //Axios;
+        const fetchApi = async () => {
+            setLoading(true);
+            const res = await searchService.search(handleDelay);
+            setSearchResult(res);
+            setLoading(false);
+        };
+
+        fetchApi();
     }, [handleDelay]);
+
     return (
         <Tippy
             interactive

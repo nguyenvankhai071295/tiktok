@@ -1,5 +1,5 @@
 .wrapper {
-    width: 100px;
+    min-width: 100px;
     height: 100%;
     padding: 6px 8px;
     border-radius: 4px;
@@ -36,12 +36,18 @@
     font-size: 18px;
     min-height: 48px;
     line-height: 25px;
+    width: 100%;
+    font-family: SofiaPro, PingFangSC, sans-serif;
 }
 .small {
     display: inline-block;
     font-size: 16px;
-    min-height: 28px;
+    height: 28px;
+    padding-top: 0;
+    padding-bottom: 0;
     line-height: 22px;
+    font-weight: 600;
+    min-width: 88px;
 }
 .rounded {
     font-size: 14px;

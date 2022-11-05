@@ -39,6 +39,12 @@ body {
     overflow-y: overlay;
     a {
         text-decoration: none;
+        color: rgba(22, 24, 35, 1);
+        -webkit-transition: color 250ms;
+        transition: color 250ms;
+        -webkit-text-decoration: none;
+        text-decoration: none;
+        cursor: pointer;
     }
 }
 h2 {

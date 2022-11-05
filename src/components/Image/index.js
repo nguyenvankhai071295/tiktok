@@ -1,5 +1,5 @@
 import { forwardRef, useState } from 'react';
-import images from '~/assets/images';
+import images from '~/assets';
 import PropTypes from 'prop-types';
 const Image = forwardRef(({ src, imgError = images.noimage, ...props }, ref) => {
     const [imageError, setImageError] = useState(src);

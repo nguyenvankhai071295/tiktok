@@ -1,7 +1,7 @@
 import styles from './Menu.module.scss';
 import classNames from 'classnames/bind';
 import Tippy from '@tippyjs/react/headless';
-import images from '~/assets/images';
+import images from '~/assets';
 import Item from './Item';
 import { useState } from 'react';
 import Header from './Header';
@@ -35,6 +35,7 @@ function Menu({ children, items = [] }) {
             placement={'bottom-end'}
             hideOnClick={'false'}
             delay={[0, 750]}
+            offset={[10, 10]}
             onHide={() => {
                 setAddClass('');
                 setHistory((prev) => {

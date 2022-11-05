@@ -1,6 +1,6 @@
 import styles from './Keyboard.module.scss';
 import classNames from 'classnames/bind';
-import images from '~/assets/images';
+import images from '~/assets';
 const cx = classNames.bind(styles);
 function Keyboard() {
     return (

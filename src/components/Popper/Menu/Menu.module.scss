@@ -1,6 +1,3 @@
-div:has(> .show-more) {
-    right: -14px !important;
-}
 .show-more {
     z-index: 1;
     background: rgb(255, 255, 255);
@@ -18,7 +15,7 @@ div:has(> .show-more) {
         min-width: 223px;
         list-style: none;
         max-height: 590px;
-        overflow-y: auto;
+        overflow-y: overlay;
         & > li {
             &:hover {
                 background: rgba(22, 24, 35, 0.03);

@@ -1,10 +1,11 @@
-import styles from './SuggestedAccounts.module.scss';
+import styles from './FollowingAccounts.module.scss';
 import classNames from 'classnames/bind';
 import AccountItem from '../AccountItem';
 import images from '~/assets';
 import { useState } from 'react';
+import React from 'react';
 const cx = classNames.bind(styles);
-function SuggestedAccounts() {
+function FollowingAccounts() {
     const account = [
         {
             srcImage: images.account.datvilla94,
@@ -101,12 +102,13 @@ function SuggestedAccounts() {
     const handleSeeall = () => {
         setSeeall(!seeall);
     };
+
     return (
         <div className={cx('user-container')}>
             <div className={cx('wrapper')}>
-                <p className={cx('title')}>Suggested accounts</p>
-                <div className={cx('content')}>
-                    {account.map((e, key) => (
+                <p className={cx('title')}>Following accounts</p>
+                {account.map((e, key) => (
+                    <div key={key} className={cx('items')}>
                         <AccountItem
                             key={key}
                             srcImage={e.srcImage}
@@ -119,12 +121,12 @@ function SuggestedAccounts() {
                             followTotal={e.followTotal}
                             likeTotal={e.likeTotal}
                         />
-                    ))}
-                </div>
+                    </div>
+                ))}
 
                 <div className={cx('show-more')}>
                     <p className={cx('see-all')} onClick={() => handleSeeall()}>
-                        {!seeall ? 'See all' : 'See less'}
+                        {!seeall ? 'See more' : 'See less'}
                     </p>
                 </div>
             </div>
@@ -132,4 +134,4 @@ function SuggestedAccounts() {
     );
 }
 
-export default SuggestedAccounts;
+export default FollowingAccounts;

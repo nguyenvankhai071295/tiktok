@@ -1,6 +1,6 @@
 import styles from './Header.module.scss';
 import classNames from 'classnames/bind';
-import images from '~/assets/images';
+import images from '~/assets';
 import Button from '~/components/Button';
 import Menu from '~/components/Popper/Menu';
 import Keyboard from '~/components/Popup/Keyboard';
@@ -13,8 +13,8 @@ import { InboxAction, Message, MessageAction } from '~/components/Icons';
 import { Inbox } from '~/components/Icons';
 import Image from '~/components/Image';
 import routesConfig from '~/components/config/routes';
+import account from '~/components/config/accounts';
 const cx = classNames.bind(styles);
-const hasUser = true;
 const MENU_ITEM = [
     {
         icon: <Image className={cx('image-icon')} src={images.language} alt="Language" />,
@@ -166,7 +166,7 @@ function Header() {
                                 <span>Upload</span>
                             </Link>
                         </div>
-                        {hasUser ? (
+                        {account.accountStatus ? (
                             <>
                                 <div className={cx('message', 'has-tooltip')}>
                                     <Tippy zIndex={10000} interactive content="Message" placement={'bottom'}>
@@ -199,8 +199,8 @@ function Header() {
                                 <Button medium children="Log in" className="login" />
                             </>
                         )}
-                        <Menu items={hasUser ? [...MENU_ITEM_LOGIN, ...MENU_ITEM, LOGOUT] : MENU_ITEM}>
-                            {hasUser ? (
+                        <Menu items={account.accountStatus ? [...MENU_ITEM_LOGIN, ...MENU_ITEM, LOGOUT] : MENU_ITEM}>
+                            {account.accountStatus ? (
                                 <div className={cx('profile')}>
                                     <Image src={images.login} alt="Nguyen van khai" />
                                 </div>
